@@ -1,0 +1,110 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: inherit;
+  user-select: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.app{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.app__logo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -10rem;
+}
+
+.app__logo-img{
+  height: 15rem;
+}
+
+.app__logo-text{
+  font-size: 5rem;
+  color: #014fc6;
+  font-weight: 600;
+}
+
+.app__autocomplete-wrapper{
+  width: 50rem;
+  position: relative;
+}
+
+.app__autocomplete{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  padding: 1.5rem;
+  box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28);
+  border-color: rgba(223,225,229,0);
+  border-radius: 25px;
+}
+
+.app__autocomplete_list-show{
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.app__autocomplete-icon{
+  width: 1.5rem;
+}
+
+.app__autocomplete-input{
+  width: 100%;
+  border: none;
+  margin: 0 1rem;
+}
+
+.app__autocomplete-list{
+  list-style: none;
+  box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28);
+  width: 100%;
+  background-color: white;
+  padding: 1rem 0 1rem 0;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  max-height: 15rem;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: absolute;
+  width: 100%;
+}
+
+.app__autocomplete-list-item{
+  padding: 0.7rem 2rem 0.7rem 1.5rem;
+  font-size: 1.4rem;
+}
+
+.app__autocomplete-list-item_active{
+  background-color: lightgray;
+}
+
+.app__autocomplete-list-item-icon{
+  margin: 0 1rem 0 0;
+}
+
+/* utilities */
+
+.u_cursor_pointer {
+  cursor: pointer;
+}
+
+/* https://www.codetinkerer.com/2019/01/14/cancel-async-requests-pattern.html */
