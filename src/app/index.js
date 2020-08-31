@@ -44,8 +44,11 @@ const App = () => {
       if(isNaN(tempConst)) tempConst = 0;
       else if(tempConst < autocompleteList.length - 1) tempConst += 1;
       else if(tempConst + 1 === autocompleteList.length) tempConst = 0;
-      setAutocompleteListActiveIndex(tempConst)
-      setAutocompleteValue(autocompleteList[tempConst].title)
+
+      if(autocompleteList[tempConst] && autocompleteList[tempConst].title){
+        setAutocompleteListActiveIndex(tempConst)
+        setAutocompleteValue(autocompleteList[tempConst].title)
+      }
     }
   }
 
@@ -54,9 +57,12 @@ const App = () => {
     const { keyCode } = e;
     if(keyCode === 38){
       let tempConst = autocompleteListActiveIndex;
-      if(!tempConst) tempConst = autocompleteList.length;
-      setAutocompleteListActiveIndex(tempConst - 1)
-      setAutocompleteValue(autocompleteList[tempConst].title)
+      if(!tempConst) tempConst = autocompleteList.length - 1;
+
+      if(autocompleteList[tempConst] && autocompleteList[tempConst].title){
+        setAutocompleteListActiveIndex(tempConst - 1)
+        setAutocompleteValue(autocompleteList[tempConst].title)
+      }
     }
   }
 

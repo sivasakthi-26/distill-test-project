@@ -1,3 +1,3 @@
-const SEARCH_API_KEY = "AIzaSyBNBT-_OB1AJZcfoyd5PFKd0mjq7Dq9uIM"
+const SEARCH_API_KEY = "AIzaSyC_x6E787lpUOlE4lndvDAbCaVV50OkKMU"
 
 export default SEARCH_API_KEY;
